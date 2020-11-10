@@ -40,6 +40,24 @@ class vggLayer(nn.Module):
 ```
 ***
 ## parameter 變化量
+### 原始的 Yolov4_S
+```
+                 from  n    params  module                                  arguments
+  0                -1  1       464  models.common.Conv                      [3, 16, 3, 1]
+  1                -1  1      4672  models.common.Conv                      [16, 32, 3, 2]
+  2                -1  1      5216  models.common.Bottleneck                [32, 32]
+  3                -1  1     18560  models.common.Conv                      [32, 64, 3, 2]
+  4                -1  1     19904  models.common.BottleneckCSP             [64, 64, 1]
+  5                -1  1     73984  models.common.Conv                      [64, 128, 3, 2]
+  6                -1  1    161152  models.common.BottleneckCSP             [128, 128, 3]
+  7                -1  1    295424  models.common.Conv                      [128, 256, 3, 2]
+  8                -1  1    641792  models.common.BottleneckCSP             [256, 256, 3]
+  9                -1  1   1180672  models.common.Conv                      [256, 512, 3, 2]
+ 10                -1  1   1248768  models.common.BottleneckCSP             [512, 512, 1]
+ 11                -1  1   1904640  models.common.SPPCSP                    [512, 256, 1]
+ 
+ Model Summary: 226 layers, 9.12461e+06 parameters, 9.12461e+06 gradients
+```
 ### 原始的 Yolov4_L
 ```
                  from  n    params  module                                  arguments
@@ -107,7 +125,7 @@ Model Summary: 170 layers, 4.54194e+07 parameters, 4.54194e+07 gradients
 ```
 ***
 ## 測試結果
-##### 因為coco 圖片集太多，為實驗方便，此處依舊僅取其車輛部分 names: ['motorcycle','car','bus','truck'], 測試結果如下，vgg19效果還遠輸vgg11，可能是太過於肥大，
+##### 因為coco 圖片集太多，為實驗方便，此處依舊僅取其車輛部分 names: ['motorcycle','car','bus','truck'], 測試結果如下:
 ![images/3_line.png](images/3_line.png)
 ![images/3_lr.png](images/3_lr.png)
 ![images/3_metric.png](images/3_metric.png)
@@ -115,4 +133,5 @@ Model Summary: 170 layers, 4.54194e+07 parameters, 4.54194e+07 gradients
 ![images/3_valid.png](images/3_valid.png)
 ***
 ## 參考
-[Yolov4](https://github.com/WongKinYiu/PyTorch_YOLOv4)
+[Yolov4](https://github.com/WongKinYiu/PyTorch_YOLOv4)  
+[VGG](https://pytorch.org/docs/stable/_modules/torchvision/models/vgg.html#vgg11)
