@@ -108,7 +108,11 @@ Model Summary: 170 layers, 4.54194e+07 parameters, 4.54194e+07 gradients
 ***
 ## 測試結果
 ##### 因為coco 圖片集太多，為實驗方便，此處依舊僅取其車輛部分 names: ['motorcycle','car','bus','truck'], 測試結果如下，vgg19效果還遠輸vgg11，可能是太過於肥大，
-
+![images/3_line.png](images/3_line.png)
+![images/3_lr.png](images/3_lr.png)
+![images/3_metric.png](images/3_metric.png)
+![images/3_train.png](images/3_train.png)
+![images/3_valid.png](images/3_valid.png)
 ***
 ## 參考
 [Yolov4](https://github.com/WongKinYiu/PyTorch_YOLOv4)
