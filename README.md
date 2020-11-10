@@ -9,9 +9,15 @@ Yolov4:
 ***
 ## yaml 檔修改
 ##### 原始的 Yolov4_L yaml 檔案的 backbone
-![images/2_yolo_yaml.png](images/2_yolo_yaml.png)
+![images/2_yolo_yaml.png](images/2_yolo_yaml.png)  
 ##### 修改後的 Yolov4_L_vgg11 yaml, number 表示幾個 CR blocks, args 則包含 channel output 和 stride。
-![images/2_yolo_yaml_vgg11.png](images/2_yolo_yaml_vgg11.png)
+![images/2_yolo_yaml_vgg11.png](images/2_yolo_yaml_vgg11.png)  
+##### 修改後的 Yolov4_L_vgg13 yaml
+![images/2_yolo_yaml_vgg13.png](images/2_yolo_yaml_vgg13.png)  
+##### 修改後的 Yolov4_L_vgg16 yaml
+![images/2_yolo_yaml_vgg16.png](images/2_yolo_yaml_vgg16.png)  
+##### 修改後的 Yolov4_L_vgg19 yaml
+![images/2_yolo_yaml_vgg19.png](images/2_yolo_yaml_vgg19.png)  
 ***
 ## 程式修改
 ### yolo.py, parse_model() 增加
